@@ -7,6 +7,7 @@ end
 
 def sorted_artists(db)
   # TODO: return array of artists' names sorted alphabetically
+  results = db.execute("SELECT name FROM artists ORDER BY name").flatten
 end
 
 def love_tracks(db)
