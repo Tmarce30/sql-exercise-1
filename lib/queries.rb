@@ -12,6 +12,7 @@ end
 
 def love_tracks(db)
   # TODO: return array of love songs sorted alphabetically
+  results = db.execute("SELECT name FROM tracks WHERE name LIKE '%love%' ORDER BY name").flatten
 end
 
 def long_tracks(db, min_length)
